@@ -11,6 +11,8 @@ function bubbleSort(arr) {
     let comparisons = 0;
 
     for (let i = 0; i < arr.length; i++) {
+        //console.log('Rodou');
+
         for (let j = 0; j < (arr.length - i - 1); j++) {
             if (arr[j] > arr[j + 1]) {
                 let temp = arr[j]
@@ -33,8 +35,11 @@ function bubbleSort(arr) {
     console.log(`Comparações: ${comparisons}`);
 }
 
-let arr = vetor.criaVetorDecrescente(20000);
-// let arr = [1,2,3,4,5,6]
+let teste = vetor.criaVetorAleatorio(10);
+let arr = teste;
+
 console.time('Tempo: ');
 bubbleSort(arr);
 console.timeEnd('Tempo: ');
+
+
