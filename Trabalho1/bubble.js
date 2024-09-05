@@ -1,4 +1,11 @@
+import { Vetores } from "./Vetor.js";
+
 function bubbleSort(arr) {
+    let vetor = new Vetores 
+
+    vetor.criaVetorCrescente()
+
+
     let trocas = 0;
     let updates = 0;
     let comparisons = 0;
@@ -30,7 +37,7 @@ function bubbleSort(arr) {
     console.log(`Comparações: ${comparisons}`);
 }
 
-let arr = [234, 43, 55, 63, 5, 6, 235, 547];
+let arr = Vetores.criaVetorCrescente(10);
 // let arr = [1,2,3,4,5,6]
 
 bubbleSort(arr);
