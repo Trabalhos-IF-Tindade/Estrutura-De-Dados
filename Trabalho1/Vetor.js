@@ -19,4 +19,18 @@ export class Vetores{
 
         return vetor;
     }
+
+    criaVetorAleatorio(tamanho){
+        let vetor = [];
+        for(let c = tamanho; c>0; c--){
+            let newNumber = Math.floor(Math.random() * 1000000) + 1
+
+            if(!vetor.find(elemento => elemento ==newNumber )){
+                vetor.push(newNumber);
+            }
+        }
+
+        return vetor;
+    }
+
 }
