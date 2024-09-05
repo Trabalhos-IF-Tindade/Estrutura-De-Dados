@@ -13,18 +13,24 @@ function bubbleSort(arr) {
                 trocas++
             }
             comparisons++
+
+            if(trocas == 0){
+                break;
+            }
         }
+
         if(trocas == 0){
-            break
+            break;
         }
+
         trocas = 0
     }
     console.log(arr);
-    console.log(updates);
-    console.log(comparisons);
+    console.log(`Trocas: ${updates}`);
+    console.log(`Comparações: ${comparisons}`);
 }
 
-// let arr = [234, 43, 55, 63, 5, 6, 235, 547];
-let arr = [1,2,3]
+let arr = [234, 43, 55, 63, 5, 6, 235, 547];
+// let arr = [1,2,3,4,5,6]
 
 bubbleSort(arr);
