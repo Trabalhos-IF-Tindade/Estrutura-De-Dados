@@ -28,12 +28,12 @@ function bubbleSort(arr) {
 
         trocas = 0
     }
-    console.log(arr);
+    console.table(arr);
     console.log(`Trocas: ${updates}`);
     console.log(`Comparações: ${comparisons}`);
 }
 
-let arr = vetor.criaVetorDecrescente(20000);
+let arr = vetor.criaVetorDecrescente(10);
 // let arr = [1,2,3,4,5,6]
 console.time('Tempo: ');
 bubbleSort(arr);
