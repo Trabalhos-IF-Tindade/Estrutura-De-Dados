@@ -20,10 +20,6 @@ function bubbleSort(arr) {
                 trocas++
             }
             comparisons++
-
-            if(trocas == 0){
-                break;
-            }
         }
 
         if(trocas == 0){
@@ -37,7 +33,8 @@ function bubbleSort(arr) {
     console.log(`Comparações: ${comparisons}`);
 }
 
-let arr = vetor.criaVetorDecrescente(1000);
+let arr = vetor.criaVetorDecrescente(20000);
 // let arr = [1,2,3,4,5,6]
-
+console.time('Tempo: ');
 bubbleSort(arr);
+console.timeEnd('Tempo: ');
