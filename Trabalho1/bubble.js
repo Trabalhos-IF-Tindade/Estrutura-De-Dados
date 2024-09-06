@@ -3,7 +3,7 @@ export class Bubble {
     constructor() { }
 
     exec(arr) {
-        console.time('tempoDeExecucao');
+        const inicio =  new Date();
 
         let trocas = 0;
         let updates = 0;
@@ -31,7 +31,8 @@ export class Bubble {
         }
 
         console.log('# MÉTODO DA BOLHA #');
-        console.timeEnd('tempoDeExecucao');
+        const fim = new Date();
+        console.log('tempoDeExecucao: ', fim - inicio);
         console.log(`Trocas: ${updates}`);
         console.log(`Comparações: ${comparisons}`);
     }

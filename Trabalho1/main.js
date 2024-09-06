@@ -17,13 +17,15 @@ let decrescente = vetor.criaVetorDecrescente(tamanhoVetor);
 let aleatorio = vetor.criaVetorAleatorio(tamanhoVetor);
 
 
+
+//LEMBRA QUE A BOLHA ESTÁ USANDO NEW DATE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 bolha.exec(crescente);
 console.log('---------------------------------------------------------------------------------------------');
-bolhaOtimizada.exec(crescente);
+/* bolhaOtimizada.exec(crescente);
 console.log('---------------------------------------------------------------------------------------------');
 selecao.exec(crescente);
 console.log('---------------------------------------------------------------------------------------------');
-insercao.exec(crescente);
+insercao.exec(crescente); */
 
 
 /* bolha.exec(decrescente);
