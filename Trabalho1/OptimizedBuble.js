@@ -3,6 +3,9 @@ export class BubbleOptimized {
     constructor() { }
 
     exec(arr) {
+        console.time('tempoDeExecucao');
+
+
         let trocas = 0;
         let comparisons = 0;
         let swapped;
@@ -24,8 +27,9 @@ export class BubbleOptimized {
             }
         }
 
-       // console.log(`Vetor ordenado: `, arr);
-       console.log('MÉTODO DA BOLHA OTIMIZADO');
+        // console.log(`Vetor ordenado: `, arr);
+        console.log('# MÉTODO DA BOLHA OTIMIZADO #');
+        console.timeEnd('tempoDeExecucao');
         console.log(`Trocas: ${trocas}`);
         console.log(`Comparações: ${comparisons}`);
     }

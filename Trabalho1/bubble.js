@@ -1,8 +1,9 @@
 export class Bubble {
 
-    constructor(){}
-    
+    constructor() { }
+
     exec(arr) {
+        console.time('tempoDeExecucao');
 
         let trocas = 0;
         let updates = 0;
@@ -28,16 +29,11 @@ export class Bubble {
 
             trocas = 0
         }
-        // 
-        //console.log(`Vetor ordenado: `, arr);
-        console.log('MÉTODO DA BOLHA');
+
+        console.log('# MÉTODO DA BOLHA #');
+        console.timeEnd('tempoDeExecucao');
         console.log(`Trocas: ${updates}`);
         console.log(`Comparações: ${comparisons}`);
-        /*      
-                console.table(arr);  
-                console.time('Tempo: ');
-                bubbleSort(arr);
-                console.timeEnd('Tempo: '); */
     }
 
 }

@@ -3,6 +3,8 @@ export class Selection {
     constructor() { }
 
     exec(arr) {
+        console.time('tempoDeExecucao');
+
         let trocas = 0;
         let comparisons = 0;
 
@@ -25,7 +27,8 @@ export class Selection {
         }
 
         //console.log(`Vetor ordenado: `, arr);
-        console.log('MÉTODO SELECTION');
+        console.log('# MÉTODO SELECTION #');
+        console.timeEnd('tempoDeExecucao');
         console.log(`Trocas: ${trocas}`);
         console.log(`Comparações: ${comparisons}`);
     }
