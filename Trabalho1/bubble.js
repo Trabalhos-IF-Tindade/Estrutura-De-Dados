@@ -30,7 +30,7 @@ function bubbleSort(arr) {
 
         trocas = 0
     }
-    console.table(arr);
+   // console.table(arr);
     console.log(`Trocas: ${updates}`);
     console.log(`Comparações: ${comparisons}`);
 }
