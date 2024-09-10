@@ -26,7 +26,7 @@ function obterDados(method, order) {
         } else if (order === "aleatoria") {
             vector = vetor.criaVetorAleatorio(tamanhoVetor);
         } else {
-            console.log("Ordem inexistente!")
+            console.log("Tipo de ordenação inexistente!")
             return
         }
 
@@ -49,13 +49,13 @@ function obterDados(method, order) {
     console.table(resultados);
 }
 console.log("Bolha:")
-obterDados(bolha, "decrescente")
+obterDados(bolha, "teste")
 
-console.log("Bolha Otimizada:")
-obterDados(bolhaOtimizada, "decrescente")
+// console.log("Bolha Otimizada:")
+// obterDados(bolhaOtimizada, "decrescente")
 
-console.log("Selection:")
-obterDados(selecao, "decrescente")
+// console.log("Selection:")
+// obterDados(selecao, "decrescente")
 
-console.log("Inserction:")
-obterDados(insercao, "decrescente")
+// console.log("Inserction:")
+// obterDados(insercao, "decrescente")
