@@ -3,33 +3,29 @@ export class Bubble {
     constructor() { }
 
     exec(arr) {
-        console.time('tempoDeExecucao: ')
-
+        // console.time('tempoDeExecucao');
+        const tempoInicial = performance.now();  // Usar performance.now() para obter o tempo em ms
+        
         let updates = 0;
         let comparisons = 0;
 
         for (let i = 0; i < arr.length; i++) {
-
             for (let j = 0; j < (arr.length - i - 1); j++) {
                 if (arr[j] > arr[j + 1]) {
-                    let temp = arr[j]
-                    arr[j] = arr[j + 1]
-                    arr[j + 1] = temp
-                    updates++
-                    trocas++
+                    let temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    updates++;
                 }
-                comparisons++
+                comparisons++;
             }
         }
 
-        console.log('# MÉTODO DA BOLHA #');
-        const fim = new Date();
-        console.timeEnd('tempoDeExecucao: ');
-        console.log(`Trocas: ${updates}`);
-        console.log(`Comparações: ${comparisons}`);
+        // console.timeEnd('tempoDeExecucao'); // Calcula e imprime o tempo
+        const tempoFinal = performance.now();  // Usar performance.now() para obter o tempo em ms
+        const tempoExecucao = tempoFinal - tempoInicial
+
+        // Retorna o número de trocas, comparações e o tempo de execução
+        return { updates, comparisons, tempoExecucao };
     }
-
 }
-
-
-

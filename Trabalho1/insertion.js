@@ -3,7 +3,7 @@ export class Insertion {
     constructor() { }
 
     exec(arr) {
-        console.time('tempoDeExecucao');
+        const tempoInicial = performance.now();
 
         let trocas = 0;
         let updates = 0;
@@ -25,11 +25,9 @@ export class Insertion {
             comparisons++
         }
 
-        // console.log(`Vetor ordenado: `, arr);
-        console.log('# MÉTODO DA INSERTION #');
-        console.timeEnd('tempoDeExecucao');
-        console.log(`Trocas: ${updates}`);
-        console.log(`Comparações: ${comparisons}`);
+        const tempoFinal = performance.now()
+        const tempoExecucao = tempoFinal - tempoInicial
+        return {updates, comparisons, tempoExecucao}
     }
 }
 

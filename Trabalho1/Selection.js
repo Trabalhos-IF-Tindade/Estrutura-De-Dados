@@ -3,14 +3,14 @@ export class Selection {
     constructor() { }
 
     exec(arr) {
-        console.time('tempoDeExecucao');
-
-        let trocas = 0;
+        const tempoInicial = performance.now()
+        
+        let updates = 0;
         let comparisons = 0;
-
+        
         for (let i = 0; i < arr.length - 1; i++) {
             let minIndex = i;
-
+            
             // Encontra o menor elemento no subarray não ordenado
             for (let j = i + 1; j < arr.length; j++) {
                 comparisons++;
@@ -18,19 +18,17 @@ export class Selection {
                     minIndex = j;
                 }
             }
-
+            
             // Troca o menor elemento encontrado com o primeiro elemento do subarray
             if (minIndex !== i) {
                 [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]; // Desestruturação para trocar os valores
-                trocas++;
+                updates++;
             }
         }
-
-        //console.log(`Vetor ordenado: `, arr);
-        console.log('# MÉTODO SELECTION #');
-        console.timeEnd('tempoDeExecucao');
-        console.log(`Trocas: ${trocas}`);
-        console.log(`Comparações: ${comparisons}`);
+        
+        const tempoFinal = performance.now()
+        const tempoExecucao = tempoFinal - tempoInicial
+        return {updates, comparisons, tempoExecucao}
     }
 
     // Exemplo de uso
