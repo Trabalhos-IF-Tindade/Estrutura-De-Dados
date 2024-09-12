@@ -15,6 +15,9 @@ let insercao = new Insertion();
 function obterDados(method, order) {
     let resultados = [];
     console.log(order)
+
+    let vetorAleatorio = vetor.criaVetorAleatorio(50000)
+
     for (let tamanhoVetor = 1000; tamanhoVetor <= 50000; tamanhoVetor += 5000) {
     
         let vector = []
@@ -24,7 +27,7 @@ function obterDados(method, order) {
         } else if (order === "decrescente") {
             vector = vetor.criaVetorDecrescente(tamanhoVetor);
         } else if (order === "aleatoria") {
-            vector = vetor.criaVetorAleatorio(tamanhoVetor);
+            vector = vetorAleatorio.slice(0, tamanhoVetor);
         } else {
             console.log("Tipo de ordenação inexistente!")
             return
@@ -58,4 +61,4 @@ function obterDados(method, order) {
 // obterDados(selecao, "decrescente")
 
 console.log("Inserction:")
-obterDados(insercao, "decrescente")
+obterDados(insercao, "aleatoria")
