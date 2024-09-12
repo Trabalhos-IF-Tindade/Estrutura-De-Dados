@@ -48,8 +48,8 @@ function obterDados(method, order) {
     // Exibir os dados em formato de tabela
     console.table(resultados);
 }
-console.log("Bolha:")
-obterDados(bolha, "teste")
+// console.log("Bolha:")
+// obterDados(bolha, "teste")
 
 // console.log("Bolha Otimizada:")
 // obterDados(bolhaOtimizada, "decrescente")
@@ -57,5 +57,5 @@ obterDados(bolha, "teste")
 // console.log("Selection:")
 // obterDados(selecao, "decrescente")
 
-// console.log("Inserction:")
-// obterDados(insercao, "decrescente")
+console.log("Inserction:")
+obterDados(insercao, "decrescente")
