@@ -3,33 +3,34 @@ export class BubbleOptimized {
     constructor() { }
 
     exec(arr) {
-        const tempoInicial = performance.now()
-
+        // console.time('tempoDeExecucao');
+        const tempoInicial = performance.now();  // Usar performance.now() para obter o tempo em ms
+        
         let updates = 0;
         let comparisons = 0;
-        let swapped;
+        let trocas = false;
 
         for (let i = 0; i < arr.length; i++) {
-            swapped = false;
-
-            for (let j = 0; j < arr.length - 1 - i; j++) {
-                comparisons++;
+            for (let j = 0; j < (arr.length - i - 1); j++) {
                 if (arr[j] > arr[j + 1]) {
-                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                    let temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                     updates++;
-                    swapped = true;
+                    trocas = true
                 }
+                comparisons++;
             }
-
-            if (!swapped) {
+            if(!trocas){
                 break;
             }
         }
 
-        const tempoFinal = performance.now()
+        // console.timeEnd('tempoDeExecucao'); // Calcula e imprime o tempo
+        const tempoFinal = performance.now();  // Usar performance.now() para obter o tempo em ms
         const tempoExecucao = tempoFinal - tempoInicial
-        return { updates, comparisons, tempoExecucao }
+
+        // Retorna o número de trocas, comparações e o tempo de execução
+        return { updates, comparisons, tempoExecucao };
     }
-
-
 }

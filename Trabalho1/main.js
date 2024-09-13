@@ -51,14 +51,14 @@ function obterDados(method, order) {
     // Exibir os dados em formato de tabela
     console.table(resultados);
 }
-// console.log("Bolha:")
-// obterDados(bolha, "teste")
+console.log("Bolha:")
+obterDados(bolha, "crescente")
 
-// console.log("Bolha Otimizada:")
-// obterDados(bolhaOtimizada, "decrescente")
+console.log("Bolha Otimizada:")
+obterDados(bolhaOtimizada, "crescente")
 
-// console.log("Selection:")
-// obterDados(selecao, "decrescente")
+console.log("Selection:")
+obterDados(selecao, "crescente")
 
 console.log("Inserction:")
-obterDados(insercao, "aleatoria")
+obterDados(insercao, "crescente")
