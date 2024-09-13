@@ -24,6 +24,7 @@ export class BubbleOptimized {
             if(!trocas){
                 break;
             }
+            trocas = false;
         }
 
         // console.timeEnd('tempoDeExecucao'); // Calcula e imprime o tempo
